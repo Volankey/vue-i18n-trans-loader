@@ -63,7 +63,7 @@ module.exports = {
           );
           console.log(from,to,key , "翻译中....");
           let res = await axios.get(
-            `http://api.fanyi.baidu.com/api/trans/vip/translate?q=${key}&from=${from}&to=${to}&appid${appid}=&salt=12345&sign=${sign}`
+            `http://api.fanyi.baidu.com/api/trans/vip/translate?q=${key}&from=${from}&to=${to}&appid=${appid}&salt=12345&sign=${sign}`
           );
           console.log(key + ">>>" + res.data.trans_result[0].dst);
 
