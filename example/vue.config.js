@@ -54,6 +54,10 @@ module.exports = {
 
         }
       ],
+      reset: {
+        path: resolve('src/assets/lang/reset.json'),
+        prevent_prefix: '$_#',
+      },
         translate: async (from,to,key) => {
           //百度翻译开发者提供的appid以及secretKey
           let appid = "xxx",
