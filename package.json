@@ -2,5 +2,32 @@
   "dependencies": {
     "colors": "^1.3.3",
     "loader-utils": "^1.2.3"
-  }
+  },
+  "name": "vue-i18n-trans-loader",
+  "description": "一个配合vue-i18n自动翻译并生成语言包的库 # 使用说明 1.安装vue-i18n，并按照vue-i18n的操作指引配置好 ```     npm install -S vue-i18n ``` 2.将src目录下的loaders拷贝到vue的src目录下",
+  "version": "1.0.3",
+  "main": "src/global.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Volankey/vue-i18n-trans-loader.git"
+  },
+  "keywords": [
+    "vue",
+    "translate",
+    "i18n",
+    "auto",
+    "auto-translate"
+  ],
+  "author": "Volankey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Volankey/vue-i18n-trans-loader/issues"
+  },
+  "homepage": "https://github.com/Volankey/vue-i18n-trans-loader#readme"
 }
