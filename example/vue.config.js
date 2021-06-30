@@ -34,7 +34,7 @@ module.exports = {
       .include.add(resolve("src"))
       .end()
       .use()
-      .loader(resolve("../src/loaders/global.js"))
+      .loader(resolve("src/loaders/global.js"))
       .options({
         langs: [{
             name: "en",
@@ -59,23 +59,19 @@ module.exports = {
         prevent_prefix: '$_#',
       },
         translate: async (from,to,key) => {
-          const appid = '20190103000254365'
-          const secretKey = 'sCIvB1J_Pe08TegAX2sP'
-          const sign = md5(`${appid + key}12345${secretKey}`)
-          console.log(from, to, key, '翻译中....')
-          console.log(
-            'url',
-            `http: //api.fanyi.baidu.com/api/trans/vip/translate?q=${key}&from=${from}&to=${to}&appid=${appid}&salt=12345&sign=${sign}`
-          )
-          const res = await axios.get(
-            encodeURI(
-              `http://api.fanyi.baidu.com/api/trans/vip/translate?q=${key}&from=${from}&to=${to}&appid=${appid}&salt=12345&sign=${sign}`
-            )
-          )
-          console.log(res.data)
-          console.log(`${key}>>>${res.data.trans_result[0].dst}`)
+          //百度翻译开发者提供的appid以及secretKey
+          let appid = "xxx",
+              secretKey = "xxx";
+          let sign = md5(
+            appid + key + "12345" + secretKey
+          );
+          console.log(from,to,key , "翻译中....");
+          let res = await axios.get(
+            `http://api.fanyi.baidu.com/api/trans/vip/translate?q=${key}&from=${from}&to=${to}&appid=${appid}&salt=12345&sign=${sign}`
+          );
+          console.log(key + ">>>" + res.data.trans_result[0].dst);
 
-          return res.data.trans_result[0].dst
+          return res.data.trans_result[0].dst;
         }
       });
   }
