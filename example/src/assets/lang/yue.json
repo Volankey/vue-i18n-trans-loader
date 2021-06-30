@@ -1,22 +1,22 @@
 {
 	"App.vue": {
-		"Welcome to Your Vue.js App": "欢迎使用你的Vue.js应用程序"
+		"Welcome to Your Vue.js App": "欢迎使用你Vue.js应用程式"
 	},
 	"components": {
 		"HelloWorld.vue": {
 			"Language": "语言",
-			"English": "英语",
+			"English": "英文",
 			"Chinese": "中国人",
 			"Cantonese": "广东话",
 			"Japanese": "日本人",
-			"check out the": "查看",
-			"documentation": "文档",
-			"Installed CLI Plugins": "已安装的CLI插件",
+			"check out the": "检视",
+			"documentation": "档案",
+			"Installed CLI Plugins": "已经安装嘅CLI插件",
 			"Essential Links Test By XiaoBai": "小白基本环节测试",
-			"Core Docs": "核心文档",
+			"Core Docs": "核心档案",
 			"Forum": "论坛",
-			"Community Chat": "社区聊天",
-			"Twitter": "推特",
+			"Community Chat": "议员倾计",
+			"Twitter": "推招",
 			"News": "新闻",
 			"Ecosystem": "生态系统"
 		}
