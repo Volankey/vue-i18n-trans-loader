@@ -1,7 +1,4 @@
 {
-	"App.vue": {
-		"Welcome to Your Vue.js App": "Welcome to Your Vue.js App"
-	},
 	"components": {
 		"HelloWorld.vue": {
 			"Language": "Language",
@@ -18,7 +15,11 @@
 			"Community Chat": "Community Chat",
 			"Twitter": "Twitter",
 			"News": "News",
-			"Ecosystem": "Ecosystem"
+			"Ecosystem": "Ecosystem",
+			"For a guide and recipes on how to configure / customize this project,": "For a guide and recipes on how to configure / customize this project,"
 		}
+	},
+	"App.vue": {
+		"Welcome to Your Vue.js App": "Welcome to Your Vue.js App"
 	}
 }

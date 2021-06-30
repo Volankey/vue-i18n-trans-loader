@@ -1,7 +1,4 @@
 {
-	"App.vue": {
-		"Welcome to Your Vue.js App": "欢迎使用你Vue.js应用程式"
-	},
 	"components": {
 		"HelloWorld.vue": {
 			"Language": "语言",
@@ -18,7 +15,11 @@
 			"Community Chat": "议员倾计",
 			"Twitter": "推招",
 			"News": "新闻",
-			"Ecosystem": "生态系统"
+			"Ecosystem": "生态系统",
+			"For a guide and recipes on how to configure / customize this project,": "有关点设定/自订此项目嘅指南同方法，"
 		}
+	},
+	"App.vue": {
+		"Welcome to Your Vue.js App": "欢迎使用你Vue.js应用程式"
 	}
 }
