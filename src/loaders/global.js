@@ -56,9 +56,21 @@ const _processTranslate = async ({
       let keys = utils.getKeys(match);
 
       for (let key of keys) {
-        //拿到$t()中间的文字
-        let willTranslateKey = key.substring(4, key.length - 2);
+        let tmpKey = key.substring(3, key.length - 1).replace(/^[\s]*|[\s]*$/g, '')
+        // 如果传递的是一个变量而不是字符串,但是这个变量的值要在翻译内容中!
+        if(!/^[\'\"]+.*[\'\"]+$/.test(tmpKey)){
+          const willTranslateKey = key.substring(3, key.length - 1).replace(/^[\'\"\s]*|[\'\"\s]*$/g, '')
 
+          const pathStr = `[\\'${objPaths
+         .join("\\'][\\'")}\\'][\\'\${${willTranslateKey}}\\']`
+          console.log("TCL: pathStr", pathStr)
+          inputSource = inputSource.replace(key, "$t(`" + pathStr +"`)")
+          continue
+       }
+        // 拿到$t()中间的文字
+        let willTranslateKey = key
+         .substring(3, key.length - 1)
+         .replace(/^[\'\"\s]*|[\'\"\s]*$/g, '')
         let langIndexs = getLangIndexes(options.langs);
 
         for (let nextNodeName of objPaths) {
