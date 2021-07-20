@@ -1,25 +1,28 @@
 {
+	"App.vue": {
+		"Welcome to Your Vue.js App": "欢迎使用你Vue.js应用程式"
+	},
 	"components": {
 		"HelloWorld.vue": {
 			"Language": "语言",
+			"Essential Links Test By XiaoBai": "小白基本环节测试",
 			"English": "英文",
 			"Chinese": "中国人",
 			"Cantonese": "广东话",
 			"Japanese": "日本人",
+			"For a guide and recipes on how to configure / customize this project,": "有关点设定/自订此项目嘅指南同方法，",
 			"check out the": "检视",
 			"documentation": "档案",
 			"Installed CLI Plugins": "已经安装嘅CLI插件",
-			"Essential Links Test By XiaoBai": "小白基本环节测试",
 			"Core Docs": "核心档案",
 			"Forum": "论坛",
 			"Community Chat": "议员倾计",
 			"Twitter": "推招",
 			"News": "新闻",
-			"Ecosystem": "生态系统",
-			"For a guide and recipes on how to configure / customize this project,": "有关点设定/自订此项目嘅指南同方法，"
+			"Ecosystem": "生态系统"
+		},
+		"Test.vue": {
+			"Language": "!! TRANSLATE ERROR !!"
 		}
-	},
-	"App.vue": {
-		"Welcome to Your Vue.js App": "欢迎使用你Vue.js应用程式"
 	}
 }
