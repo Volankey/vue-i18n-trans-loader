@@ -1,25 +1,28 @@
 {
+	"App.vue": {
+		"Welcome to Your Vue.js App": "あなたのvuj . jsアプリへようこそ"
+	},
 	"components": {
 		"HelloWorld.vue": {
 			"Language": "言語",
+			"Essential Links Test By XiaoBai": "必須リンクテスト",
 			"English": "英語",
 			"Chinese": "中国語",
 			"Cantonese": "広東語",
 			"Japanese": "日本語",
+			"For a guide and recipes on how to configure / customize this project,": "このプロジェクトを構成/カスタマイズする方法についてのガイドとレシピ",
 			"check out the": "チェックアウト",
 			"documentation": "ドキュメント",
 			"Installed CLI Plugins": "プラグインのインストール",
-			"Essential Links Test By XiaoBai": "必須リンクテスト",
 			"Core Docs": "コアドキュメント",
 			"Forum": "フォーラム",
 			"Community Chat": "コミュニティチャット",
 			"Twitter": "Twitter",
 			"News": "ニュース",
-			"Ecosystem": "生態系",
-			"For a guide and recipes on how to configure / customize this project,": "このプロジェクトを構成/カスタマイズする方法についてのガイドとレシピ"
+			"Ecosystem": "生態系"
+		},
+		"Test.vue": {
+			"Language": "!! TRANSLATE ERROR !!"
 		}
-	},
-	"App.vue": {
-		"Welcome to Your Vue.js App": "あなたのvuj . jsアプリへようこそ"
 	}
 }

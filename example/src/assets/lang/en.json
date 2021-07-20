@@ -1,28 +1,28 @@
-<<<<<<< HEAD
-=======
 {
+	"App.vue": {
+		"Welcome to Your Vue.js App": "Welcome to Your Vue.js App"
+	},
 	"components": {
 		"HelloWorld.vue": {
 			"Language": "Language",
+			"Essential Links Test By XiaoBai": "Essential Links Test By XiaoBai",
 			"English": "English",
 			"Chinese": "Chinese",
 			"Cantonese": "Cantonese",
 			"Japanese": "Japanese",
+			"For a guide and recipes on how to configure / customize this project,": "For a guide and recipes on how to configure / customize this project,",
 			"check out the": "check out the",
 			"documentation": "documentation",
 			"Installed CLI Plugins": "Installed CLI Plugins",
-			"Essential Links Test By XiaoBai": "Essential Links Test By XiaoBai",
 			"Core Docs": "Core Docs",
 			"Forum": "Forum",
 			"Community Chat": "Community Chat",
 			"Twitter": "Twitter",
 			"News": "News",
-			"Ecosystem": "Ecosystem",
-			"For a guide and recipes on how to configure / customize this project,": "For a guide and recipes on how to configure / customize this project,"
+			"Ecosystem": "Ecosystem"
+		},
+		"Test.vue": {
+			"Language": "Language"
 		}
-	},
-	"App.vue": {
-		"Welcome to Your Vue.js App": "Welcome to Your Vue.js App"
 	}
 }
->>>>>>> 4ce73a50f105a0643f51ef516455a1ad4ecae4ac
