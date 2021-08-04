@@ -92,7 +92,7 @@ const _processTranslate = async ({
             }
             let langIndex = langIndexs[j];
             //如果是source的索引
-            if (j === 0) {
+            if (j === 0 && langIndex[willTranslateKey]===undefined) {
               langIndex[willTranslateKey] = willTranslateKey;
             } else if (!hasTrans[options.langs[j].name][willTranslateKey] && !langIndex[willTranslateKey]) {
               try {

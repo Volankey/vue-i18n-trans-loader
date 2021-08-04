@@ -5,7 +5,7 @@
   },
   "name": "vuei18n-translate-loader",
   "description": "一个配合vue-i18n自动翻译并生成语言包的库 # 使用说明 1.安装vue-i18n，并按照vue-i18n的操作指引配置好 ```     npm install -S vue-i18n ``` 2.将src目录下的loaders拷贝到vue的src目录下",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "src/loaders/global.js",
   "directories": {
     "example": "example"
