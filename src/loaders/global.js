@@ -6,7 +6,7 @@ const loaderUtils = require("loader-utils");
 var GlobalLang = {};
 var log = console.log;
 console.log = (...args) => {
-  log("\n" + " global ".black.bgBlue, ...args);
+  log("\n" + " i18n auto translate ".black.bgBlue, ...args);
 }
 const _init = (langs) => {
   // 遍历一次langs 文件不存在则创建 存在则读取
@@ -45,7 +45,7 @@ const _processTranslate = async ({
 
   let hasTrans = {};
   //寻找 $t(xxx)
-  let matches = inputSource.match(/\$t\((.*)\)/g);
+  let matches = inputSource.match(utils.createReg());
   const filePathObjStr = objPaths.join(',')
   if (!globalLangChangeMap[filePathObjStr]) {
     globalLangChangeMap[filePathObjStr] = {}
@@ -168,21 +168,42 @@ const saveToLangFile = function (langs, globalLangChangeMap) {
         flag: "w",
         encoding: "utf8"
       });
-      console.log(("更新file: " + item.path).green);
+      console.log(("update file: " + item.path).green);
 
     }
   })
 }
+function i18nAutoTranslatePlugin(options) {
+  const fileRegex = options.includes ? options.includes : /\.(vue|js|ts|jsx|tsx)$/;
+  return {
+    name: "i18nAutoTranslatePlugin",
+    enforce: "pre",
+    async transform(code, id) {
+      if (fileRegex.test(id)) {
+        const res = await translate(code, id,options);
+        return res
+      }
+    },
+    async handleHotUpdate(ctx) {
+      if (fileRegex.test(ctx.file)) {
+        const defaultRead = ctx.read;
+        ctx.read = async function () {
+          return await translate(await defaultRead(),ctx.file, options);
+        };
+        return ctx.modules;
+      }
+    },
+  };
+}
+async function translate(source,path,options) {
 
-module.exports = async function (source) {
-
-  const options = loaderUtils.getOptions(this);
+  // const options = loaderUtils.getOptions(this);
   //我们需要拿到这个文件的path，以确定他是src下哪个目录下的哪个文件
 
   let langs = options.langs;
 
   _init(langs);
-  let objPaths = utils.getObjPath(this.resourcePath);
+  let objPaths = utils.getObjPath(path);
 
   var { outputSource, globalLangChangeMap } = await _processTranslate({
     inputSource: source,
@@ -194,3 +215,4 @@ module.exports = async function (source) {
 
   return outputSource;
 }
+module.exports = i18nAutoTranslatePlugin

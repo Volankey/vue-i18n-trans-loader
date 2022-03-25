@@ -1,4 +1,4 @@
-
+const createReg = ()=>/\$t\(\n?(.*)\n?\)/g
 function getObjPath(path) {
   let paths = path.substring(path.lastIndexOf("/src") + 5).split("/");
   // path = paths.join(".");
@@ -23,7 +23,7 @@ function getKeys(s) {
       if (stack.length === 2) {
         // 去掉$t()的两个括号
         res.push("$t" + str.substring(0));
-        s = s.substring(i).match(/\$t\((.*)\)/g);
+        s = s.substring(i).match(createReg());
         if (s) (s = s[0]), (i = -1), (len = s.length), (stack = []);
         else break;
       } else stack.push(str);
@@ -33,5 +33,6 @@ function getKeys(s) {
 }
 module.exports = {
   getObjPath,
-  getKeys
+  getKeys,
+  createReg
 }
